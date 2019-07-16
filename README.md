@@ -15,3 +15,12 @@ volumes:
     - ./:/var/www
 working_dir: /var/www
 ```
+
+Finally add your pm2 config file in your project with name `ecosystem.config.js` ([documentation](http://pm2.keymetrics.io/docs/usage/application-declaration/)). It need to be in the root directory.
+
+If you want another name/location for your config file, orverride the ENTRYPOINT like this :
+```
+entrypoint:
+    - pm2-docker
+    - path/to/config/file.js
+```
